@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  #navbar-nav{
+  background-color: #FC5789;
+  }
+  #collapse{
+  background-color: #FC5789;
+  }
+    button {
+ appearance: none;
+ background-color: white;
+<!-- border: 0.125em solid #1A1A1A;-->
+ border-radius: 10em;
+ box-sizing: border-box;
+ color: #3B3B3B;
+ cursor: pointer;
+ display: inline-block;
+ font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+ font-size: 16px;
+ font-weight: 600;
+ line-height: normal;
+ margin: 0;
+ min-height: 3.75em;
+ min-width: 0;
+ outline: none;
+ padding: 1em 2.3em;
+ text-align: center;
+ text-decoration: none;
+ transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ will-change: transform;
+}
+
+button:disabled {
+ pointer-events: none;
+}
+
+button:hover {
+ color: #fff;
+ background-color: #1A1A1A;
+ box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+ transform: translateY(-2px);
+}
+
+button:active {
+ box-shadow: none;
+ transform: translateY(0);
+}
+#cat{
+margin-top: 100px;
+
+}
+  </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div>-->
+<!--     <nav class="navbar navbar-expand-lg navbar-light  rounded" style="background-color: blue;">-->
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+
+<!--        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">-->
+<!--          <ul class="navbar-nav">-->
+<!--            <li class="nav-item active">-->
+<!--              <a class="nav-link" href="#">Centered nav only <span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="#">Link</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link disabled" href="#">Disabled</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              -->
+<!--              -->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </nav>-->
+<!--</div>-->
+<!-- category -->
+
+<div id="cat">
+  <h3><center>CATEGORIES</center></h3>
+    <nav id="nb" class="navbar1 navbar-expand-lg navbar-light bg-light  rounded" style="background-color: transparent;" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div  class="collapse navbar-collapse justify-content-md-center" id="collapse">
+         
+          <ul id="navbar-nav" class="navbar-nav">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="http://127.0.0.1:8000/wallapp/adamoleddisplay/"><button>AMOLED</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/wallapp/addarkdisplay/"><button>DARK</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/wallapp/adabstractdisplay/"><button>ABSTRACT</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/wallapp/admoviesdisplay/"><button>MOVIES</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/wallapp/adgirldisplay/"><button>GIRL</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/wallapp/adnaturedisplay/"><button>NATURE</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/wallapp/adanimaldisplay/"><button>ANIMALS</button></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</div>
+</body>
+</html>

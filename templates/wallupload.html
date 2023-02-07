@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    #top{
+        margin-top: 100px;
+        }
+        body {
+  margin: 20px 60px;
+}
+
+.drop-container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  color: #444;
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+  background: #eee;
+  border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+  color: #222;
+}
+
+.drop-title {
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color .2s ease-in-out;
+}
+
+input[type=file] {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'indexnavbar1.html' %}
+{% include 'adnavbar.html' %}
+<div id="top">
+  <form method="post" enctype="multipart/form-data">{% csrf_token %}
+      <div class="container-fluid">
+          <div class="row">
+
+              <div class="col-4">
+                  <img height="300" width="430" src="https://img.freepik.com/free-vector/concept-image-upload-landing-page_23-2148319404.jpg?w=996&t=st=1669574093~exp=1669574693~hmac=c42c5259673431158a95e38510f8f410e76ceeed46860c2daf9fc20bb548b648">
+              </div>
+
+
+              <div class="col-4">
+
+
+                  <label for="images" class="drop-container">
+  <span class="drop-title">Drop files here</span>
+  or
+  <input type="file" id="images" name="image" accept="image/*" required>
+</label><br>
+                  <div class="form-group">
+  <h4><label for="usr">Name of the wallpaper</label></h4>
+  <input type="text" class="form-control" name="imagename" id="usr">
+</div><br>
+
+                  <div>
+                      <div class="swappy-radios" role="radiogroup" aria-labelledby="swappy-radios-label">
+  <h4 id="swappy-radios-label">CATEGORIES</h4>
+  <label>
+    <input type="radio" name="category" value="amoled" checked />
+    <span class="radio"></span>
+    <span>AMOLED</span>
+  </label>
+  <label>
+    <input type="radio" name="category" VALUE="dark" />
+    <span class="radio"></span>
+    <span>DARK</span>
+  </label>
+  <label>
+    <input type="radio" name="category" value="abstract" />
+    <span class="radio"></span>
+    <span>ABSTRACT</span>
+  </label>
+  <label>
+    <input type="radio" name="category" value="movies" />
+    <span class="radio"></span>
+    <span>MOVIES</span>
+  </label>
+
+  <label>
+    <input type="radio" name="category" value="girl" />
+    <span class="radio"></span>
+    <span>GIRL</span>
+  </label>
+                          <label>
+    <input type="radio" name="category" value="nature" />
+    <span class="radio"></span>
+    <span>NATURE</span>
+  </label>
+                          <label>
+    <input type="radio" name="category" value="animals" />
+    <span class="radio"></span>
+    <span>ANIMALS</span>
+  </label>
+</div>
+
+
+                  </div>
+
+
+                  <br>
+                                   <div><center> <button type="submit" class="btn btn-primary" name="create">Upload</button></center></div>
+
+
+              </div>
+              <div class="col-4">
+                  <img height="300" width="300" src="https://cdn.dribbble.com/userupload/3221789/file/original-9f7b825082dea531f29caaf893bca740.gif?compress=1&resize=1504x1128">
+
+
+              </div>
+
+
+
+          </div>
+
+      </div>
+  </form>
+    <div class="container-fluid">
+
+    </div>
+
+</div>
+
+{% include 'indexfooter.html' %}
+</body>
+</html>

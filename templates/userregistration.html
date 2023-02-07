@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #top{
+        margin-top: 150px;
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'indexnavbar1.html' %}
+<div id="top">
+    <div class="container-fluid" >
+    <div class="row">
+        <div class="col-2"></div>
+
+
+
+        <div class="col-3">
+             <form method="post">{% csrf_token %}
+                 <div><h3>User Registration</h3></div>
+		<div class="form-group">
+    <label for="fullname">Full Name</label>
+    <input placeholder="eg: subin raj" pattern="[A-Za-z0-9]+" type="text" class="form-control" id="exampleInputfirstname" name="fullname" required >
+  </div>
+  <div class="form-group">
+    <label for="username">User Name</label>
+    <input placeholder="eg: fortunatefogy" type="text"  class="form-control" id="exampleInputlastname" name="username" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input placeholder="eg: subinrajsofficial@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input placeholder="************" type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" id="exampleInputPassword" name="password" required>
+  </div><br>
+                 <div><center> <button type="submit" class="btn btn-primary" name="create">Sign up</button><p class="extra">Already have an account? <a href="http://127.0.0.1:8000/wallapp/userlogin/">Login</a> </p></center></div>
+
+
+</form>
+        </div>
+
+
+
+        <div class="col-3">
+            <img height="500" width="550" src="https://img.freepik.com/free-vector/sign-up-concept-illustration_114360-7965.jpg?w=740&t=st=1670771714~exp=1670772314~hmac=e0b874440f91a1a208a7da2b28403566cff4b4959a68935934377d0426d8cba8">
+
+        </div>
+
+
+        <div class="col-3">
+
+        </div>
+
+
+
+    </div>
+</div>
+
+</div>
+{% include 'indexfooter.html' %}
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+    #body{
+      background-color: #FC5789 ;
+    }
+     .col-4{
+    margin-bottom: 50px;
+    }
+    .card {
+
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+       .button {
+   margin-top: 10px;
+ display: inline-block;
+ border-radius: 7px;
+ border: none;
+ background: #1875FF;
+ color: white;
+ font-family: inherit;
+ text-align: center;
+ font-size: 13px;
+ box-shadow: 0px 14px 56px -11px #1875FF;
+ width: 10em;
+ padding: 1em;
+ transition: all 0.4s;
+ cursor: pointer;
+}
+
+.button span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.4s;
+}
+
+.button span:after {
+ content: 'for free';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -20px;
+ transition: 0.7s;
+}
+
+.button:hover span {
+ padding-right: 3.55em;
+}
+
+.button:hover span:after {
+ opacity: 4;
+ right: 0;
+}
+    #card{
+            background-color:#353535 ;
+            border-radius: 10px;
+        }
+
+    .fa-heart-o {
+  color: red;
+  cursor: pointer;
+}
+
+.fa-heart {
+  color: red;
+  cursor: pointer;
+}
+
+        #top{
+        margin-top: 50px;
+        }
+    </style>
+    {% load static %}
+    <script src="https://kit.fontawesome.com/9025c284d2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body">
+{% include 'indexnavbar1.html' %}
+{% include 'navbar.html' %}
+<div id="top">
+  <div class="container-fluid">
+    <div class="row">
+         {% for i,j,k in mylist %}
+      <div class="col-4">
+          <div id="card" class="card card text-light  mb-3" style="height: 30rem;">
+<!--  <h5 class="card-title">Card title</h5>-->
+  <div class="card-body">
+      <img  src="/static/girl/{{i}}" class="card-img-top" alt="...">
+      <h3>{{k}}</h3>
+      <a  href="/static/girl/{{i}}" download=""><button class="button" style="vertical-align:middle"><span>Download</span></button></a>
+
+
+
+
+      </div>
+</div>
+
+      </div>
+        {% endfor %}
+
+ </div>
+{% include 'indexfooter.html' %}
+
+</body>
+</html>
